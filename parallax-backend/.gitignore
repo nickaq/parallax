@@ -1,0 +1,10 @@
+target/
+help.md
+.mvn/wrapper/maven-wrapper.properties
+.idea/
+*.iml
+.DS_Store
+data/
+*.log
+*.mv.db
+*.trace.db

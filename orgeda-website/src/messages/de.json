@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "brandschutz": "Brandschutz",
+    "bueroplanung": "Büroplanung",
+    "fabrikplanung": "Fabrikplanung",
+    "logistikplanung": "Logistikplanung",
+    "innovativeTechniken": "Innovative Techniken",
+    "kontakt": "Kontakt",
+    "ueberUns": "Über Uns"
+  },
+  "hero": {
+    "title": "Innovative Techniken",
+    "subtitle": "Engineering Excellence für Architektur & Bau",
+    "description": "Detailgenauigkeit | Erneuerung | Perfektion in der Umsetzung Ihrer Projekte",
+    "cta": "Kontakt aufnehmen"
+  },
+  "services": {
+    "title": "Unsere Leistungen",
+    "brandschutz": {
+      "title": "Brandschutz",
+      "description": "Flucht- & Rettungspläne, Feuerwehrpläne, Brandschutzkonzepte und externer Brandschutzbeauftragter"
+    },
+    "bueroplanung": {
+      "title": "Büroplanung",
+      "description": "Systematische Raumplanung, ganzheitliche Bürokonzepte, New Work Spaces und Desk Sharing"
+    },
+    "fabrikplanung": {
+      "title": "Fabrikplanung",
+      "description": "Fabrikkonzepte, Layoutplanung, Prozessplanung und Materialflussplanung"
+    },
+    "logistikplanung": {
+      "title": "Logistikplanung",
+      "description": "Ganzheitliche Logistikkonzepte, Lagerplanung und BIM in der Logistikplanung"
+    },
+    "innovativeTechniken": {
+      "title": "Innovative Techniken",
+      "description": "Augmented Reality, Drohnenvermessung, 3D-Laserscanning und 3D-Druck"
+    }
+  },
+  "about": {
+    "title": "Innovation. Fortschritt. Verbesserung.",
+    "subtitle": "Arbeitsabläufe optimieren und Projektergebnisse aufwerten.",
+    "description": "Die Fachplaner von Orgeda stehen mit Expertise, Kompetenz und Fachwissen gerne zu Ihrer Verfügung."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "submit": "Nachricht senden",
+    "success": "Vielen Dank! Ihre Nachricht wurde gesendet.",
+    "error": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "footer": {
+    "address": "Max-Eyth-Straße 30, 72649 Wolfschlugen",
+    "phone": "+49 (0)7022 / 209 805-0",
+    "email": "info@orgeda.eu",
+    "rights": "© 2025 Orgeda GmbH. Alle Rechte vorbehalten.",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "agb": "AGB"
+  }
+}

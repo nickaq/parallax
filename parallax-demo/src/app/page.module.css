@@ -1,0 +1,571 @@
+.main {
+  position: relative;
+  /* Use clip instead of hidden - allows transforms but clips overflow */
+  overflow-x: clip;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(180deg, #0a0a0f 0%, #12121a 100%);
+}
+
+.bgLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.decorLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contentLayer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.orb1 {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.4), rgba(139, 92, 246, 0.2));
+  top: -200px;
+  left: -100px;
+}
+
+.orb2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(139, 92, 246, 0.2));
+  bottom: -100px;
+  right: -50px;
+}
+
+.orb3 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(59, 130, 246, 0.3));
+  top: 40%;
+  right: 20%;
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+}
+
+/* Floating cards */
+.floatingCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  white-space: nowrap;
+}
+
+.cardIcon {
+  font-size: 1.25rem;
+}
+
+.floatingCard {
+  top: 20%;
+  left: 10%;
+}
+
+.cardRight {
+  top: 35%;
+  right: 10%;
+  left: auto;
+}
+
+.cardBottom {
+  top: auto;
+  bottom: 25%;
+  left: 15%;
+}
+
+/* Hero content */
+.heroContent {
+  text-align: center;
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a5b4fc;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  animation: fadeInUp 1s ease 1s both;
+}
+
+.scrollMouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.scrollWheel {
+  width: 3px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ==================== FEATURES SECTION ==================== */
+.features {
+  min-height: 100vh;
+  padding: 8rem 2rem;
+  position: relative;
+  background: linear-gradient(180deg, #12121a 0%, #0a0a0f 100%);
+}
+
+.orbFeature1 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(99, 102, 241, 0.1));
+  top: 10%;
+  right: -200px;
+}
+
+.orbFeature2 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(139, 92, 246, 0.1));
+  bottom: 10%;
+  left: -150px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+/* ==================== DEMO SECTION ==================== */
+.demo {
+  min-height: 100vh;
+  padding: 8rem 2rem;
+  position: relative;
+  background: linear-gradient(180deg, #0a0a0f 0%, #0f0f17 100%);
+}
+
+.demoShape {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+}
+
+.shape1 {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  top: 15%;
+  left: 10%;
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3);
+}
+
+.shape2 {
+  background: linear-gradient(135deg, #ec4899, #f472b6);
+  top: 25%;
+  right: 15%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 20px 50px rgba(236, 72, 153, 0.3);
+}
+
+.shape3 {
+  background: linear-gradient(135deg, #14b8a6, #22d3d1);
+  bottom: 30%;
+  left: 20%;
+  border-radius: 50%;
+  box-shadow: 0 20px 50px rgba(20, 184, 166, 0.3);
+}
+
+.shape4 {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  bottom: 20%;
+  right: 10%;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 20px 50px rgba(245, 158, 11, 0.3);
+}
+
+.shape5 {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  top: 60%;
+  left: 5%;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.3);
+}
+
+.demoInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 3rem auto 0;
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.infoCard h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #a5b4fc;
+}
+
+.infoCard p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==================== CODE SECTION ==================== */
+.codeSection {
+  min-height: 80vh;
+  padding: 8rem 2rem;
+  position: relative;
+  background: linear-gradient(180deg, #0f0f17 0%, #0a0a0f 100%);
+}
+
+.orbCode {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.1));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.codeBlock {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.codeBlock pre {
+  padding: 2rem;
+  overflow-x: auto;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.codeBlock code {
+  color: #e2e8f0;
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #0a0a0f;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.footerNote {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .floatingCard {
+    display: none;
+  }
+  
+  .demoShape {
+    width: 60px;
+    height: 60px;
+    font-size: 0.625rem;
+  }
+  
+  .shape4 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .codeBlock pre {
+    padding: 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .scrollIndicator,
+  .scrollWheel {
+    animation: none;
+  }
+}
+
+/* Contact Section */
+.contact {
+  padding: 8rem 2rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.sectionTag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #667eea;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+  background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+.contactInfo {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 100%;
+}
+
+.contactInfo h3 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  color: white;
+}
+
+.contactInfo p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contentLayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+}

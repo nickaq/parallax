@@ -1,0 +1,66 @@
+.section {
+  position: relative;
+  /* Allow parallax elements to move outside bounds */
+  overflow: visible;
+  /* Use paint containment only - layout containment blocks transforms */
+  contain: paint;
+}
+
+.layer {
+  /* GPU acceleration */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  
+  /* Disable pointer events by default to allow clicking through layers */
+  pointer-events: none;
+}
+
+.layer.interactive {
+  /* Enable pointer events for interactive layers */
+  pointer-events: auto;
+}
+
+/* Content layer that should always be interactive */
+.content {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* Background layer positioning */
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Decoration layer for floating elements */
+.decoration {
+  position: absolute;
+  z-index: 5;
+}
+
+/* Ensure text remains readable and clickable */
+.textContent {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+/* Hero section specific styles */
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Reduce motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .layer {
+    transform: none !important;
+    will-change: auto !important;
+  }
+}

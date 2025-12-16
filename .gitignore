@@ -1,0 +1,21 @@
+# System
+.DS_Store
+.vscode
+.idea
+
+# Logs
+*.log
+
+# Java / Maven
+target/
+*.class
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+build/
+.env.local
+
+# Redis
+dump.rdb
